@@ -132,4 +132,4 @@ tableNameColumnTitle=Товар
 new Shell({
   appWidthLimited:false,
 ```
-![This is an image](https://github.com/zeeenjaaa/JETBI-home-work/blob/main/screenshots/Screenshot_5.png)<br>
+![This is an image](https://github.com/zeeenjaaa/JETBI-home-work/blob/main/screenshots/Screenshot_1.png)<br>
