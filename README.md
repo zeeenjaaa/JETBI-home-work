@@ -1,11 +1,11 @@
 # JETBI-home-work
 JETBI-home-work-3
-
+https://github.com/zeeenjaaa/JETBI-home-work/blob/Worklist-3/screenshots/Screenshot_1.png
 ДЗ:
 1. Создать приложение Worklist у себя в Web IDE
-![This is an image](https://github.com/zeeenjaaa/JETBI-home-work/blob/main/screenshots/Screenshot_2.png)<br>
+![This is an image](https://github.com/zeeenjaaa/JETBI-home-work/blob/Worklist-3/screenshots/Screenshot_2.png)<br>
 2. Вывести отображение полей в таблице CreatedByFullName, CreatedBy, ModifiedBy, ModifiedBy GroupID, SubGroupID, MaterialText, Created <br>
-![This is an image](https://github.com/zeeenjaaa/JETBI-home-work/blob/main/screenshots/Screenshot_1.png)<br>
+![This is an image](https://github.com/zeeenjaaa/JETBI-home-work/blob/Worklist-3/screenshots/Screenshot_1.png)<br>
 ```xml
 <columns>
   <Column id="nameColumn">
@@ -112,12 +112,12 @@ tableNameColumnTitle=Товар
 ```xml
 	<Text text="{ path: 'Created' , type: 'sap.ui.model.type.Date', formatOptions: {pattern: 'HH:mm dd/MM/yyyy'} }"/>
 ```
-![This is an image](https://github.com/zeeenjaaa/JETBI-home-work/blob/main/screenshots/Screenshot_5.png)<br>
+![This is an image](https://github.com/zeeenjaaa/JETBI-home-work/blob/Worklist-3/screenshots/Screenshot_5.png)<br>
 3.  Сделать, чтобы записи где CreatedBy = Ваш пользователь подсвечивалась слева зеленым цветом.
 ```xml
 	<ColumnListItem type="Navigation" press="onPress" highlight="{= ${CreatedBy} === 'D1B1000039' ? 'Success' : 'None' }">
 ```
-![This is an image](https://github.com/zeeenjaaa/JETBI-home-work/blob/main/screenshots/Screenshot_4.png)<br>
+![This is an image](https://github.com/zeeenjaaa/JETBI-home-work/blob/Worklist-3/screenshots/Screenshot_4.png)<br>
 5. Сделать чтобы в MessageToast подтягивались текста из i18n, и на русском было "Привет мир!"
 ```javascript
   onPressToastMessage: function(oEvent) {
@@ -125,11 +125,11 @@ tableNameColumnTitle=Товар
         MessageToast.show(msg);
       }
 ```
-![This is an image](https://github.com/zeeenjaaa/JETBI-home-work/blob/main/screenshots/Screenshot_3.png)<br>
+![This is an image](https://github.com/zeeenjaaa/JETBI-home-work/blob/Worklist-3/screenshots/Screenshot_3.png)<br>
 ДЗ+:
 1. Сделать приложение на всю ширину экрана.
 ```html
 new Shell({
   appWidthLimited:false,
 ```
-![This is an image](https://github.com/zeeenjaaa/JETBI-home-work/blob/main/screenshots/Screenshot_1.png)<br>
+![This is an image](https://github.com/zeeenjaaa/JETBI-home-work/blob/Worklist-3/screenshots/Screenshot_1.png)<br>
