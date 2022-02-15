@@ -1,0 +1,72 @@
+<mvc:View controllerName="zjblesssons.Marketplace-home-work-3.controller.Worklist" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:semantic="sap.f.semantic">
+	<semantic:SemanticPage id="page" headerPinnable="false" toggleHeaderOnTitleClick="false">
+		<semantic:titleHeading>
+			<Title text="{i18n>worklistTitle}"/>
+		</semantic:titleHeading>
+		<semantic:content>
+			<Table alternateRowColors="true" id="table" width="auto" mode="Delete"
+				items="{ path: '/zjblessons_base_Materials', sorter: { path: 'CreatedBy', group: true, descending: false } }"
+				noDataText="{worklistView>/tableNoDataText}" busyIndicatorDelay="{worklistView>/tableBusyDelay}" growing="true" growingScrollToLoad="true"
+				growingThreshold="20" updateFinished="onUpdateFinished" delete="onPressDelete">
+				<headerToolbar>
+					<Toolbar>
+						<Title id="tableHeader" text="{worklistView>/worklistTableTitle}"/>
+						<ToolbarSpacer/>
+						<Button type="Reject" text="{i18n>tToastButton}" press="onPressToastMessage" icon="sap-icon://activate"/>
+						<Button type="Accept" text="{i18n>tCreateButton}" press="onPressCreateButton"/>
+						<SearchField id="searchField" tooltip="{i18n>worklistSearchTooltip}" search="onSearch" width="auto"></SearchField>
+					</Toolbar>
+				</headerToolbar>
+				<columns>
+					<Column id="nameColumn">
+						<Text text="{i18n>tableNameColumnTitle}" id="nameColumnTitle"/>
+					</Column>
+					<Column>
+						<Text text="{i18n>MaterialDescriptionColumnLabel}"/>
+					</Column>
+					<Column>
+						<Text text="{i18n>CreatedByFullNameColumnLabel}"/>
+					</Column>
+					<Column>
+						<Text text="{i18n>CreatedByColumnLabel}"/>
+					</Column>
+					<Column>
+						<Text text="{i18n>ModifiedByColumnLabel}"/>
+					</Column>
+					<Column>
+						<Text text="{i18n>SubGroupIDColumnLabel}"/>
+					</Column>
+					<Column>
+						<Text text="{i18n>MaterialTextColumnLabel}"/>
+					</Column>
+					<Column>
+						<Text text="{i18n>CreatedColumnLabel}"/>
+					</Column>
+					<Column>
+						<Text text="{i18n>tEditButton}"/>
+					</Column>
+				</columns>
+				<items>
+					<ColumnListItem type="Navigation" press="onPress" highlight="{= ${CreatedBy} === 'D1B1000039' ? 'Success' : 'None' }">
+						<cells>
+							<ObjectIdentifier title="{MaterialText}"/>
+							<Text text="{MaterialDescription}"/>
+							<Text text="{CreatedByFullName}"/>
+							<Text text="{CreatedBy}"/>
+							<Text text="{ModifiedBy}"/>
+							<Text text="{SubGroupID}"/>
+							<Text text="{MaterialText}"/>
+							<Text text="{ path: 'Created' , type: 'sap.ui.model.type.Date', formatOptions: {pattern: 'HH:mm dd/MM/yyyy'} }"/>
+							<Button type="Default" press="onPressEditButton" icon="sap-icon://edit"/>
+								
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+			</semantic:content>
+			<semantic:sendEmailAction>
+				<semantic:SendEmailAction id="shareEmail" press="onShareEmailPress"/>
+			</semantic:sendEmailAction>
+		</semantic:SemanticPage>
+	</mvc:View>
