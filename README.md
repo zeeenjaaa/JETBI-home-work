@@ -1,6 +1,6 @@
 # JETBI-home-work
 JETBI-home-work-3
-https://github.com/zeeenjaaa/JETBI-home-work/blob/Worklist-3/screenshots/Screenshot_1.png
+
 ДЗ:
 1. Создать приложение Worklist у себя в Web IDE
 ![This is an image](https://github.com/zeeenjaaa/JETBI-home-work/blob/Worklist-3/screenshots/Screenshot_2.png)<br>
