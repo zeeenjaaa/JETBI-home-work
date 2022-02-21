@@ -1,0 +1,33 @@
+<mvc:View controllerName="zjblesssons.Marketplace-home-work-3.controller.Object" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:semantic="sap.f.semantic">
+	<semantic:SemanticPage id="page" headerPinnable="false" toggleHeaderOnTitleClick="false" busy="{objectView>/busy}"
+		busyIndicatorDelay="{objectView>/delay}">
+		<semantic:titleHeading>
+			<Title text="{json>/MaterialText}"/>
+		</semantic:titleHeading>
+		<semantic:headerContent>
+			<ObjectNumber/>
+		</semantic:headerContent>
+		<semantic:titleCustomTextActions>
+			<Button visible="{= !${objectView>/editMode}}" text="edit" press="onPressEdit" icon="sap-icon://edit" type="Transparent"/>
+			<Button visible="{objectView>/editMode}" text="save" press="onPressSave" type="Accept"/>
+			<Button visible="{objectView>/editMode}" text="cancel" press="onPressCancel" type="Reject"/>
+		</semantic:titleCustomTextActions>
+		<semantic:content>
+			<VBox visible="true" class="sapUiContentPadding">
+				<Title visible="true" text="MaterialText"/>
+				<Title visible="{= !${objectView>/editMode}}" text="{json>/MaterialText}"/>
+				<Input visible="{objectView>/editMode}" value="{json>/MaterialText}"/>
+				<Title visible="true" text="GroupID "/>
+				<Title visible="{= !${objectView>/editMode}}" text="{json>/GroupID}"/>
+				<Input visible="{objectView>/editMode}" value="{json>/GroupID}"/>
+				<Title visible="true" text="SubGroupID "/>
+				<Title visible="{= !${objectView>/editMode}}" text="{json>/SubGroupID}"/>
+				<Input visible="{objectView>/editMode}" value="{json>/SubGroupID}"/>
+			</VBox>
+		</semantic:content>
+		<semantic:sendEmailAction>
+			<semantic:SendEmailAction id="shareEmail" press="onShareEmailPress"/>
+		</semantic:sendEmailAction>
+	</semantic:SemanticPage>
+</mvc:View>
