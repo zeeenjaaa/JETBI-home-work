@@ -29,4 +29,4 @@
 ## 9*. Добавить в smartFilterBar фильтр по полю MaterialText в виде выпадающего списка(в списке только существующие в таблице Materials значения MaterialText) с помощью аннотаций. Попробовать убрать дубликаты значений из списка(выводить только уникальные значения MaterialText).
 ![This is an image](https://github.com/zeeenjaaa/JETBI-home-work/blob/Worklist-6/screenshots/chrome_OnDoMT4w5v.png)
 ## 10*. Добавить фильтр по полю Created с возможностью выбора типа периода, а также предопределенных значений(сегодня, завтра, текущая неделя(месяц,год), следующая неделя(месяц,год))
-![This is an image](https://github.com/zeeenjaaa/JETBI-home-work/blob/Worklist-6/screenshots/chrome_5VOo9zusE0.gif)
+Не получилось
