@@ -1,4 +1,6 @@
 # ДЗ_Лекция_6 
+
+Скачать [Проект архивом](https://github.com/zeeenjaaa/JETBI-home-work/raw/Worklist-6/Marketplace-home-work-6.zip)
 ## 1. Изучить материал по ссылкам, которые я оставил для вас в презентации
 ## 2. Добавить контрол SmartTable, отобразить колонки с помощью аннотаций. Добавить встроенный функционал контрола(экспорт, персонализация, полноэкранный режим, variantManagment, отображение количества записей, имя таблицы).
 ![This is an image](https://github.com/zeeenjaaa/JETBI-home-work/blob/Worklist-6/screenshots/chrome_mrRHhHI7Dp.png)
