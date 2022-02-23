@@ -16,6 +16,12 @@ onInit: function() {
 }
 ```
 ## 3. На object вывести элементы, используя List>InputListItem>Text/Input/Select. В зависимости View/Edit мод отображать или текста, или инпуты и селекты(поимер на скриншотах). Добавить кнопки save, cancel. По нажатию на save происходит переход во view мод и сохранение изменений, при нажатии на cancel откатываются несохраненные изменения без!! перехода во view мод.
+отмена
+![This is an image](https://github.com/zeeenjaaa/JETBI-home-work/blob/Worklist-7/screenshots/chrome_WrpBCSa9NC.gif)
+сохранение
+![This is an image](https://github.com/zeeenjaaa/JETBI-home-work/blob/Worklist-7/screenshots/chrome_axr1H64Plw.gif)
+общий вид
+![This is an image](https://github.com/zeeenjaaa/JETBI-home-work/blob/Worklist-7/screenshots/chrome_L2v1LBXcdB.png)
 ```xml
 <List headerText="{i18n>MaterialTextColumnLabel}: {MaterialText}">
   <InputListItem label="{= ${objectView>/editMode} ? ${i18n>tSwitchTextTrue} :${i18n>tSwitchTextFalse}}">
@@ -51,11 +57,13 @@ onInit: function() {
 </List>
 ```
 ## 4. Добавить в заголовок элемент, который будет менять свое значение в зависимости от View/Edit Мода. Пример заголовка: Detail page, mode: View. 
+![This is an image](https://github.com/zeeenjaaa/JETBI-home-work/blob/Worklist-7/screenshots/chrome_nLYy84YN6C.gif)
 ```xml
 <Title class="sapUiMediumMarginBeginEnd" 
        text="{i18n>tDetailPageTitleMode} {= ${objectView>/editMode}?${i18n>tSwitchTextTrue}:${i18n>tSwitchTextFalse}}"/>
 ```
 ## 5. Реализовать вывод информации о создании в формате, установленном в зависимости от настроек даты и времени на пк(использовать format options)
+![This is an image](https://github.com/zeeenjaaa/JETBI-home-work/blob/Worklist-7/screenshots/chrome_JhxVtjEfoz.png)
 ```xml
 <Text id="idCreated" text="{path: 'Created', type:'sap.ui.model.type.DateTime', formatOptions: {style: 'short'}}" visible="true"/>
 ```
@@ -67,6 +75,7 @@ onInit: function() {
 
 # Дополнительные задания:
 ## 8*. Реализовать в п.3 языкозависимый вывод информации о режиме(англ. view/edit, рус. просмотр/редактирование)
+![This is an image](https://github.com/zeeenjaaa/JETBI-home-work/blob/Worklist-7/screenshots/chrome_nLYy84YN6C.gif)
 ```xml
 <Title class="sapUiMediumMarginBeginEnd"
 text="{i18n>tDetailPageTitleMode} {= ${objectView>/editMode}?${i18n>tSwitchTextTrue}:${i18n>tSwitchTextFalse}}"/>
@@ -76,6 +85,7 @@ text="{i18n>tDetailPageTitleMode} {= ${objectView>/editMode}?${i18n>tSwitchTextT
 <InputListItem label="{= ${objectView>/editMode} ? ${i18n>tSwitchTextTrue} :${i18n>tSwitchTextFalse}}">
 ```
 ## 9**. Для п.4 выводить только фамилию, без имени, изменить формат даты, и выводить помимо даты добавления/изменения сколько дней назад запись была добавлена/изменена, все вводимые руками текста должны быть языкозависимыми. Окончательны вариант: Modified by Sirosh on Thu, Feb 14, 2022, modified 5d, 20h, 15m ago.
+![This is an image](https://github.com/zeeenjaaa/JETBI-home-work/blob/Worklist-7/screenshots/chrome_Visv442lZl.png)
 ```xml
 <InputListItem label="{i18n>MODIFIED}">
   <Text id="idModified" text="{parts: ['Modified', 'ModifiedByFullName'], formatter: '.formatter.modifiedInfo'}" visible="true"/>
@@ -105,3 +115,4 @@ modifiedInfo : function (Modified, ModifiedByFullName){
 
 ## 10***(необязательно)  При удалении записи на странице worklist сделать таким образом, чтобы бизи индикатор отображался только на удаляемой записи. Перед выполнением этого задания написать @evgeniysirosh или в чат, нужно сделать специфические настройки manifest.
 По идее нужно прокидывать 'true' в метод setBusy() контрола ColumnListItem. Но у меня не получилось. 
+
