@@ -52,7 +52,8 @@ onInit: function() {
 ```
 ## 4. Добавить в заголовок элемент, который будет менять свое значение в зависимости от View/Edit Мода. Пример заголовка: Detail page, mode: View. 
 ```xml
-<Title class="sapUiMediumMarginBeginEnd" text="{i18n>tDetailPageTitleMode} {= ${objectView>/editMode}?${i18n>tSwitchTextTrue}:${i18n>tSwitchTextFalse}}"/>
+<Title class="sapUiMediumMarginBeginEnd" 
+       text="{i18n>tDetailPageTitleMode} {= ${objectView>/editMode}?${i18n>tSwitchTextTrue}:${i18n>tSwitchTextFalse}}"/>
 ```
 ## 5. Реализовать вывод информации о создании в формате, установленном в зависимости от настроек даты и времени на пк(использовать format options)
 ```xml
@@ -62,6 +63,7 @@ onInit: function() {
 смотри ниже - пункт 9.
 
 ## 7. Сделать все тексты языкозависимыми (добавить тексты в i18n и использовать их во view, с помощью биндинга i18n модели)
+смотри выше - пункт 3.
 
 # Дополнительные задания:
 ## 8*. Реализовать в п.3 языкозависимый вывод информации о режиме(англ. view/edit, рус. просмотр/редактирование)
