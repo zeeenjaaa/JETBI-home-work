@@ -1,0 +1,39 @@
+<mvc:View controllerName="zjblesssons.Marketplace-home-work-3.controller.Worklist" xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc"
+	xmlns:semantic="sap.f.semantic" xmlns:smartFilterBar="sap.ui.comp.smartfilterbar" xmlns:smartTable="sap.ui.comp.smarttable">
+	<semantic:SemanticPage id="page" headerPinnable="false" toggleHeaderOnTitleClick="false" >
+		<semantic:titleHeading>
+			<Title text="{i18n>worklistTitle}" />
+		
+		
+		</semantic:titleHeading>
+		<semantic:headerContent>
+			<smartFilterBar:SmartFilterBar id="smartFilterBar" entitySet="zjblessons_base_Materials" liveMode="false" persistencyKey="pk_MaterialSFB"></smartFilterBar:SmartFilterBar>
+		</semantic:headerContent>
+		<semantic:content>
+		
+			<smartTable:SmartTable id="smartTableMaterialsID" entitySet="zjblessons_base_Materials" smartFilterId="smartFilterBar"
+				useExportToExcel="true" beforeExport="onBeforeExport" tableType="ResponsiveTable" useVariantManagement="true" useTablePersonalisation="true"
+				placeToolbarInTable="true" header="Materials" showRowCount="true" persistencyKey="pk_MaterialSF" enableAutoBinding="true"
+				showFullScreenButton="true" enableAutoColumnWidth="true" editTogglable="true">
+				<smartTable:customToolbar>
+					<Toolbar>
+						<ToolbarSpacer/>
+						<Button type="Reject" text="{i18n>tToastButton}" press="onPressToastMessage" icon="sap-icon://activate"/>
+						<Button type="Emphasized" text="{i18n>tCreateButton}" press="onPressCreateButton" icon="sap-icon://create"/>
+						<Button type="Accept" text="{i18n>tSubmitButton}" press="onPressSubmitButton" icon="sap-icon://accept"/>
+						<Button type="Reject" text="{i18n>tResetButton}" press="onPressResetButton" icon="sap-icon://reset"/>
+						<Button type="Emphasized" text="{i18n>tRefreshButton}" press="onPressRefreshButton" icon="sap-icon://refresh"/>
+						<SearchField id="searchField" tooltip="{i18n>worklistSearchTooltip}" search="onSearch" width="auto"></SearchField>
+					</Toolbar>
+				</smartTable:customToolbar>
+				<Table id="table" mode="Delete" width="auto" growing="true" growingScrollToLoad="true" growingThreshold="20"
+					updateFinished="onUpdateFinished" delete="onPressDelete">
+					<columns></columns>
+					<items>
+						<ColumnListItem type="Navigation" press="onPress"></ColumnListItem>
+					</items>
+				</Table>
+			</smartTable:SmartTable>
+		</semantic:content>
+	</semantic:SemanticPage>
+</mvc:View>
